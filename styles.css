@@ -12,6 +12,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .welcomeSection {
@@ -20,7 +21,6 @@ body {
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 50rem;
 }
 
 header {
@@ -32,8 +32,8 @@ header {
 header span {
     font-size: 2.7rem;
     font-weight: 700;
-    color: rgba(235, 222, 153, 0.9);
-    text-shadow: 2px 2px;
+    color: rgba(235, 222, 120, 0.9);
+    text-shadow: 1px 1px;
 }
 
 header ul {
@@ -51,7 +51,7 @@ header ul li {
 header ul li a {
     text-decoration: none;
     font-weight: 500;
-    color: rgba(235, 222, 153, 0.9);
+    color: rgba(235, 222, 120, 0.9);
     border: 1px solid rgba(235, 221, 153, 0.55);
     border-radius: 5%;
 }
@@ -61,3 +61,38 @@ header ul li a:hover {
     border-color: beige;
     transition: 400ms;
 }
+
+/*profilactic*/
+img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1132px) {
+    .welcomeSection {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    header span {
+        font-size: 1.55rem;
+        transition: 300ms;
+    }
+
+    header ul li {
+        font-size: 1rem;
+        transition: 300ms;
+    }
+}
+
+/*@media only screen and (max-width: 454px) {
+    header span {
+        font-size: 1.55rem;
+        transition: 300ms;
+    }
+
+    header ul li {
+        font-size: 1rem;
+        transition: 300ms;
+    }
+}*/
