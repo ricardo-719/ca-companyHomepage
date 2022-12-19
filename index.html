@@ -1,78 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap" rel="stylesheet">
-    <title>Woodsmanship Inc.</title>
-  </head>
-  <body>
-    <div class="welcomeSection">
-      <header>
-        <span>Woodsmanship Inc.</span>
-        <nav>
-          <ul>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li> <a href="#services">Services</a></li>
-          </ul>
-        </nav>
-      </header>
-      <div id="hero">
-        <div class="heroText">
-          <h1>Woodsmanship Incorporated</h1>
-          <p>Furniture By Professionals</p>
-          <p>Quality furniture hand-made for your specific needs with the highest level of quality and precision.</p>
-        </div>
-        <div class="heroButtons">
-          <a>OUR PROJECTS</a>
-          <a>GET ADVICE</a>
-        </div>
-      </div>
-    </div>
-    <div id="aboutUs">
-      <p>We produce furniture and interior items on a individual basis, achieving the highest product quality even for the most sophisticated customer.</p>
-      <div>
-        <img src="https://images.pexels.com/photos/6963787/pexels-photo-6963787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Our Products">
-        <div class="aboutUsSubText">
-          <h2>We Produce Furniture Of Any Complexity</h2>
-          <p>Built-in wardrobes and wardrobes, hanging and stationary cabinets, racks, countertops, window sills, wooden partitions and slats, doors, stairs, 
-            tables, non-standard interior designs made of wood </p>
-          <a href="#services">Learn More -></a>
-        </div>
-      </div>
-    </div>
-    <div id="services">
-      <h1>Our Services and Main Features</h1>
-      <div class="servicesCards">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-    <div id="projects">
-      <div class="projectsCards">
-        <img src="https://images.pexels.com/photos/3653849/pexels-photo-3653849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Project one">
-        <img src="https://images.pexels.com/photos/279707/pexels-photo-279707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Project two">
-        <img src="https://images.pexels.com/photos/2917375/pexels-photo-2917375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Project three">
-      </div>
-    </div>
-    <div id="prices">
-      <h2>Prices</h2>
-      <h4>The cost is formed depending on the project. Flexible payment terms and individual arrangements.</h4>
-      <div class="pricesCard">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles.css">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<script src="script.js"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap" rel="stylesheet">
+		<title>Woodsmanship Inc.</title>
+	</head>
+	<body>
+		<div class="welcomeSection">
+			<header>
+				<div class="mobileView">
+					<span>Woodsmanship Inc.</span>
+					<button id="headerButtonNav" class="button-nav" onclick="active()" aria-controls="primary-navigation" aria-pressed="false">
+						<svg fill="var(--button-color)" class="hamburger" viewBox="0 0 100 100" width="35">
+							<rect class="line top" width="80" height="10" x="10" y="30" rx="4"></rect>
+							<rect class="line middle" width="80" height="10" x="10" y="50" rx="4"></rect>
+							<rect class="line bottom" width="80" height="10" x="10" y="70" rx="4"></rect>
+						</svg>
+					</button>
+				</div>
+				<nav>
+					<ul class="menu">
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li> <a href="#services">Services</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div id="hero">
+				<div class="heroText">
+					<h1>Woodsmanship Incorporated</h1>
+					<p>Furniture By Professionals</p>
+					<p>Quality furniture hand-made for your specific needs with the highest level of quality and precision.</p>
+				</div>
+				<div class="heroButtons">
+					<a>OUR PROJECTS</a>
+					<a>GET ADVICE</a>
+				</div>
+			</div>
+		</div>
+		<div id="aboutUs">
+			<p>We produce furniture and interior items on a individual basis, achieving the highest product quality even for the most sophisticated customer.</p>
+			<div>
+				<img src="https://images.pexels.com/photos/6963787/pexels-photo-6963787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Our Products">
+				<div class="aboutUsSubText">
+					<h2>We Produce Furniture Of Any Complexity</h2>
+					<p>Built-in wardrobes and wardrobes, hanging and stationary cabinets, racks, countertops, window sills, wooden partitions and slats, doors, stairs, 
+						tables, non-standard interior designs made of wood </p>
+					<a href="#services">Learn More -></a>
+				</div>
+			</div>
+		</div>
+		<div id="services">
+			<h1>Our Services and Main Features</h1>
+			<div class="servicesCards">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		<div id="projects">
+			<div class="projectsCards">
+				<img src="https://images.pexels.com/photos/3653849/pexels-photo-3653849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Project one">
+				<img src="https://images.pexels.com/photos/279707/pexels-photo-279707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Project two">
+				<img src="https://images.pexels.com/photos/2917375/pexels-photo-2917375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Project three">
+			</div>
+		</div>
+		<div id="prices">
+			<h2>Prices</h2>
+			<h4>The cost is formed depending on the project. Flexible payment terms and individual arrangements.</h4>
+			<div class="pricesCard">
 
-      </div>
-    </div>
-    <div id="contact">
-      <div class="contactInfo"></div>
-      <div class="map"></div>
-    </div>
-    <footer></footer>
-  </body>
+			</div>
+		</div>
+		<div id="contact">
+			<div class="contactInfo"></div>
+			<div class="map"></div>
+		</div>
+		<footer></footer>
+	</body>
 </html>
