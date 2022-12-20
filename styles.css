@@ -22,6 +22,7 @@ body {
     background-size: cover;
     width: 100%;
     height: 50rem;
+    min-width: fit-content;
 }
 
 header {
@@ -34,7 +35,7 @@ header span {
     font-size: 2.7rem;
     font-weight: 700;
     color: rgba(235, 222, 120, 0.9);
-    text-shadow: 1px 1px;
+    text-shadow: 2px 2px 2px black;
 }
 
 header ul {
@@ -53,7 +54,9 @@ header ul li a {
     text-decoration: none;
     font-weight: 500;
     color: rgba(235, 222, 120, 0.9);
-    border: 1px solid rgba(235, 221, 153, 0.55);
+    text-shadow: 2px 2px 2px black;
+    border: 1px solid rgba(235, 222, 120, 0.9);
+    padding: 2px 4px;
     border-radius: 5%;
 }
 
@@ -65,6 +68,77 @@ header ul li a:hover {
 
 .button-nav {
     display: none;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 80%;
+    justify-content: center;
+}
+
+.heroText {
+    font-size: 2.4rem;
+    max-width: 55rem;
+    color: burlywood;
+    text-shadow: 3px 3px 2px rgb(80, 66, 47);
+}
+
+.heroButtons {
+    margin-top: 3%;
+}
+
+.heroButtons .btn {
+    display: inline-block;
+    background-color: rgb(222, 184, 135, 0.8);
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroButtons .btnOne::before  {
+    content: "";
+    position: absolute;
+    background-color: rgba(235, 222, 120, 0.9);
+    width: 0px; 
+    height: 0px;
+    /*variables to be manipulated on JS*/
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.7s, height 0.7s;
+}
+
+.heroButtons .btnTwo::before  {
+    content: "";
+    position: absolute;
+    background-color: rgba(235, 222, 120, 0.9);
+    width: 0px; 
+    height: 0px;
+    /*variables to be manipulated on JS*/
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 0.7s, height 0.7s;
+}
+
+.btnOne:hover::before, .btnTwo:hover::before {
+    width: 400px;
+    height: 400px;
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
 }
 
 /*profilactic*/
@@ -87,10 +161,11 @@ img {
     header ul li {
         font-size: 1rem;
         transition: 300ms;
+        margin-right: 10%;
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 620px) {
     header {
         display: flex;
         flex-direction: column;
@@ -120,7 +195,10 @@ img {
         background: transparent;
         border: 3px solid var(--button-color, white);
         border-radius: 0.5rem;
+        box-shadow: 2px 2px 2px black;
         --button-color: rgba(235, 222, 120, 0.75);
+        margin-right: 5%;
+        cursor: pointer;
     }
     
     .button-nav .line {
@@ -149,5 +227,12 @@ img {
         display: inline-block;
         max-height: 2rem;
         transition: max-height 200ms ease-out;
+    }
+
+    .heroText {
+        font-size: 2rem;
+        max-width: 55rem;
+        color: burlywood;
+        text-shadow: 3px 3px 2px rgb(80, 66, 47);
     }
 }
