@@ -127,15 +127,9 @@ img {
         transition: 600ms;
     }
     
-    .button-nav:active, .button-nav:hover :is(.top, .bottom) {
+    .button-nav[aria-pressed="true"] :is(.top, .bottom) {
         y: 50;
     }
-
-    .button-nav[aria-pressed="true"] and header nav .menu {
-        display: block;
-        max-height: 2rem;
-        transition: max-height 200ms ease-out;
-}
 
     .mobileView {
         display: flex;
@@ -148,6 +142,12 @@ img {
     header nav .menu {
         display: none;
         max-height: 0;
+        transition: max-height 200ms ease-out;
+    }
+
+    header nav .menu[aria-pressed="true"] {
+        display: inline-block;
+        max-height: 2rem;
         transition: max-height 200ms ease-out;
     }
 }
