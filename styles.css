@@ -7,6 +7,7 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -90,7 +91,7 @@ header ul li a:hover {
     margin-top: 3%;
 }
 
-.heroButtons .btn {
+.btn {
     display: inline-block;
     background-color: rgb(222, 184, 135, 0.8);
     padding: 20px 40px;
@@ -103,11 +104,11 @@ header ul li a:hover {
     overflow: hidden;
 }
 
-.heroButtons .btnOne::before  {
+.btnOne::before  {
     content: "";
     position: absolute;
     background-color: rgba(235, 222, 120, 0.9);
-    width: 0px; 
+    width: 0px;
     height: 0px;
     /*variables to be manipulated on JS*/
     left: var(--xPos);
@@ -117,11 +118,11 @@ header ul li a:hover {
     transition: width 0.7s, height 0.7s;
 }
 
-.heroButtons .btnTwo::before  {
+.btnTwo::before  {
     content: "";
     position: absolute;
     background-color: rgba(235, 222, 120, 0.9);
-    width: 0px; 
+    width: 0px;
     height: 0px;
     /*variables to be manipulated on JS*/
     left: var(--xPos);
@@ -139,6 +140,84 @@ header ul li a:hover {
 .btn span {
     position: relative;
     z-index: 1;
+}
+
+#aboutUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% 5%;
+}
+
+#aboutUs h2 {
+    font-size: 2.7rem;
+}
+
+#aboutUs p {
+    font-size: 1.3rem;
+    font-style: italic;
+    width: 80%;
+    padding: 10px 0px;
+}
+
+.aboutUsSubInfo {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 3%;
+}
+
+.aboutUsSubInfo img {
+    display: block;
+    width: 35%;
+    margin: 2%;
+    height: auto;
+    min-width: 160px;
+    padding: 2px;
+    border: 1px solid grey;
+}
+
+.aboutUsSubText {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items:flex-start;
+    justify-content: center;
+    margin: 1%;
+}
+
+.aboutUsSubText h3 {
+    font-size: 2.2rem;
+}
+
+#services {
+    text-align: center;
+    width: 100%;
+    margin: 2% 0px;
+    font-size: 1.2rem;
+}
+
+#projects {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#projects .projectsCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:0.5rem;
+    margin: 2%;
+}
+
+.projectTwo {
+    background-image: url('https://images.pexels.com/photos/279707/pexels-photo-279707.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#contact {
+    display: flex;
 }
 
 /*profilactic*/
@@ -234,5 +313,21 @@ img {
         max-width: 55rem;
         color: burlywood;
         text-shadow: 3px 3px 2px rgb(80, 66, 47);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #aboutUs h2 {
+        font-size: 2.2rem;
+    }
+    
+    #aboutUs p {
+        font-size: 1rem;
+        font-style: italic;
+        width: 80%;
+    }
+
+    .aboutUsSubText h3 {
+        font-size: 1.8rem;
     }
 }
